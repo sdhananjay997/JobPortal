@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'jobPortalGui';
+  constructor(private obj:MatSnackBar){}
+
+  openSnackBar(){
+    this.obj.open("Hello World");
+  }
+
 }
